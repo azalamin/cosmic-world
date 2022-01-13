@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =====================
+=========Common CSS
+======================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+.highlight {
+  color: #ff008e;
+}
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff008e;
+  margin: 50px 0px;
+  display: inline-block;
+}
+.primary-button {
+  outline: 0;
+  border: 0;
+  padding: 15px 20px;
+  background-image: linear-gradient(90deg, #c4076f, #ff008e);
+  font-size: 18px;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0px 7px 0px 0px #9d0559;
+  position: relative;
+  text-transform: uppercase;
+  top: 0;
+}
+.primary-button:active {
+  top: 5px;
+  box-shadow: 0px 2px 0px 0px #9d0559;
+}
+
+/* ================================
+========= Navigation Part CSS
+=================================== */
+#home {
+  background-image: url(images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  overflow: hidden;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+.navigation li {
+  list-style: none;
+  margin-right: 10px;
+}
+.navigation li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 10px;
+  font-weight: 600;
+}
+
+/* ================================
+========= Banner Part CSS
+=================================== */
+.banner-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 80px);
+  min-height: 500px;
+}
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.banner-left h1 {
+  color: #fff;
+  font-size: 45px;
+}
+.banner-left p {
+  color: #fff;
+  margin: 20px 0px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-content: flex-end;
+}
+.banner-right img {
+  width: 100%;
+}
+
+/* ================================
+========= Feature Part CSS
+=================================== */
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.card {
+  width: 300px;
+  padding: 30px;
+  margin: 0 auto;
+  box-shadow: 0 30px 35px rgb(0 0 0 / 20%);
+}
+.card .card-icon {
+  background-color: #ff008e;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 11px;
+  font-size: 35px;
+}
+.card h2 {
+  color: #ff008e;
+  margin: 15px 0px;
+}
+.card p {
+  margin-bottom: 15px;
+}
+.card a {
+  text-decoration: none;
+  color: #ff008e;
+}
