@@ -8,6 +8,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =====================
 =========Common CSS
 ======================== */
@@ -41,6 +45,7 @@ body {
   box-shadow: 0px 7px 0px 0px #9d0559;
   position: relative;
   text-transform: uppercase;
+  cursor: pointer;
   top: 0;
 }
 .primary-button:active {
@@ -118,6 +123,7 @@ body {
 /* ================================
 ========= Feature Part CSS
 =================================== */
+
 .feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -173,6 +179,7 @@ body {
 .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 .contact-img img {
   width: 100%;
@@ -187,8 +194,93 @@ body {
 .text-field {
   width: 100%;
   margin: 10px 0px;
-  padding: 15px 10px;
+  padding: 10px;
   font-size: 18px;
   outline: 0;
   border: 1px solid #ff008e;
+}
+
+footer {
+  margin-top: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom Menu Bar */
+#toggle-menu {
+  display: none;
+}
+#menu {
+  display: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ================================
+========= Responsive Part CSS
+=================================== */
+
+@media (max-width: 950px) {
+  .banner-left h1 {
+    font-size: 40px;
+  }
+  .photo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .banner-main {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    padding-bottom: 40px;
+  }
+  .feature,
+  .photo,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-left {
+    order: 2;
+    margin-top: 40px;
+  }
+  .banner-left h1 {
+    font-size: 30px;
+  }
+  #menu {
+    display: block;
+  }
+  .navigation {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    transform: translateX(830px);
+    transform-origin: right;
+    transition: 0.5s ease-in-out;
+  }
+  #toggle-menu:checked ~ .navigation {
+    transform: translateX(0px);
+  }
+  .navigation li {
+    margin: 5px 0px;
+  }
+  .navigation li a {
+    color: black;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 100%;
+  }
 }
